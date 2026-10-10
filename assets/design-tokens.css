@@ -1,0 +1,160 @@
+:root {
+  color-scheme: light;
+
+  /* Typography */
+  --lw-font-ui: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", "PingFang SC", system-ui, sans-serif;
+  /* Typography roles: ./typography.md. Keep business styles on these tokens. */
+  --lw-font-size-caption: 10.5px;
+  --lw-font-size-label: 12px;
+  --lw-font-size-body: 13px;
+  --lw-font-size-title: 15px;
+  --lw-font-size-reading: 14px;
+  --lw-font-size-section: 16px;
+  --lw-font-size-headline: 20px;
+  /* Result reading must remain legible on the zoomable desktop canvas. */
+  --lw-font-size-result: var(--lw-font-size-section);
+  --lw-font-size-result-label: var(--lw-font-size-body);
+  --lw-font-size-result-title: 24px;
+  /* Structural headings and highlighted data have independent roles. */
+  --lw-font-size-record-section: var(--lw-font-size-headline);
+  --lw-font-size-record-group: 18px;
+  --lw-font-size-record-subsection: var(--lw-font-size-section);
+  --lw-line-height-heading: 1.35;
+  --lw-line-height-body: 1.5;
+  --lw-line-height-reading: 1.65;
+  --lw-font-weight-medium: 560;
+  --lw-font-weight-semibold: 650;
+
+  /* Spacing */
+  --lw-space-1: 4px;
+  --lw-space-2: 8px;
+  --lw-space-3: 12px;
+  --lw-space-4: 16px;
+  --lw-space-5: 20px;
+  --lw-space-6: 24px;
+  --lw-space-8: 32px;
+
+  /* Shape */
+  --lw-radius-control: 8px;
+  --lw-radius-field: 10px;
+  --lw-radius-card: 14px;
+  --lw-radius-panel: 22px;
+  --lw-radius-dialog: 24px;
+  --lw-radius-pill: 999px;
+
+  /* Semantic color */
+  --lw-color-background: #f2f2f7;
+  --lw-color-canvas: #f6f6f8;
+  --lw-color-surface-glass: rgba(255, 255, 255, 0.72);
+  --lw-color-surface-strong: rgba(255, 255, 255, 0.9);
+  --lw-color-text: #1d1d1f;
+  --lw-color-text-secondary: #6e6e73;
+  --lw-color-text-tertiary: #8e8e93;
+  --lw-color-separator: rgba(60, 60, 67, 0.12);
+  --lw-color-separator-strong: rgba(60, 60, 67, 0.18);
+  --lw-color-fill: rgba(120, 120, 128, 0.1);
+  --lw-color-fill-strong: rgba(120, 120, 128, 0.17);
+  --lw-color-accent: #0071e3;
+  /* Data hues identify the measure, never its quality or business severity. */
+  --lw-color-data-measurement: #287d78;
+  --lw-color-data-model: #7255a3;
+  --lw-color-data-measurement-surface: color-mix(in srgb, var(--lw-color-data-measurement) 8%, transparent);
+  --lw-color-data-model-surface: color-mix(in srgb, var(--lw-color-data-model) 8%, transparent);
+  --lw-color-action-primary: #1d1d1f;
+  --lw-color-on-action-primary: #ffffff;
+  --lw-color-success: #34c759;
+  /* Attention includes risks, review, partial results and warnings. Blue by user decision.
+     Meaning stays in the label/icon; never infer business severity from the hue. */
+  --lw-color-attention: var(--lw-color-accent);
+  --lw-color-attention-ink: color-mix(in srgb, var(--lw-color-attention) 80%, var(--lw-color-text));
+  --lw-color-attention-surface: color-mix(in srgb, var(--lw-color-attention) 7.5%, transparent);
+  --lw-color-attention-border: color-mix(in srgb, var(--lw-color-attention) 16%, transparent);
+  --lw-color-warning: var(--lw-color-attention); /* Compatibility alias; do not restore amber. */
+  --lw-color-danger: #ff3b30;
+  /* Workflow stage identity stays restrained: source, analysis and decision only. */
+  --lw-color-stage-source: var(--lw-color-success);
+  --lw-color-stage-analysis: var(--lw-color-accent);
+  --lw-color-stage-decision: color-mix(in oklch, var(--lw-color-accent) 68%, var(--lw-color-text));
+
+  /* Shared workflow content surfaces. Floating controls keep their own material roles. */
+  --lw-node-surface: #ffffff;
+  --lw-node-surface-processing: #e6f0f9;
+  --lw-node-border: rgba(0, 0, 0, 0.07);
+  --lw-node-shadow: 0 1px 2px rgba(0, 0, 0, 0.035), 0 8px 22px rgba(0, 0, 0, 0.045);
+  --lw-node-shadow-raised: 0 8px 24px rgba(15, 23, 42, 0.12), 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  /* Quiet chip surfaces — same field shares one tone; no rainbow-by-index */
+  --lw-chip-bg: var(--lw-color-fill);
+  --lw-chip-fg: var(--lw-color-text);
+  --lw-chip-border: rgba(60, 60, 67, 0.08);
+  --lw-chip-bg-soft: color-mix(in srgb, var(--lw-color-accent) 9%, #ffffff);
+  --lw-chip-fg-soft: color-mix(in srgb, var(--lw-color-accent) 48%, #1d1d1f);
+  --lw-chip-bg-more: rgba(120, 120, 128, 0.08);
+  --lw-chip-fg-more: var(--lw-color-text-tertiary);
+
+  /* Materials and elevation */
+  --lw-glass-border: rgba(255, 255, 255, 0.66);
+  --lw-glass-fill-top: rgba(255, 255, 255, 0.64);
+  --lw-glass-fill-bottom: rgba(255, 255, 255, 0.35);
+  --lw-glass-fill-base: rgba(255, 255, 255, 0.42);
+  --lw-glass-shadow: inset 0 0.5px 0 rgba(255, 255, 255, 0.95), inset 0 -0.5px 0 rgba(0, 0, 0, 0.035), 0 7px 22px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --lw-glass-blur: 28px;
+  --lw-glass-saturation: 185%;
+  /* Shared floating control layer: a slightly denser frost for toolbar and dock glass. */
+  --lw-glass-floating-fill-top: rgba(255, 255, 255, 0.70);
+  --lw-glass-floating-fill-bottom: rgba(255, 255, 255, 0.42);
+  --lw-glass-floating-fill-base: rgba(255, 255, 255, 0.48);
+  --lw-glass-floating-blur: 32px;
+  --lw-glass-floating-saturation: 185%;
+  --lw-glass-floating-border: rgba(255, 255, 255, 0.78);
+  /* Top navigation: transmitted color, microscopic frost, and a lit glass rim. */
+  --lw-toolbar-glass-fill: rgb(248 250 253 / 18%);
+  --lw-toolbar-glass-hover: rgb(255 255 255 / 28%);
+  --lw-toolbar-glass-blur: 18px;
+  --lw-toolbar-glass-saturation: 145%;
+  --lw-toolbar-glass-light: rgb(255 255 255 / 78%);
+  --lw-toolbar-glass-shade: rgb(52 65 80 / 12%);
+  --lw-toolbar-glass-grain: 0.095;
+  --lw-toolbar-glass-shadow: inset 0 1px 2px rgb(255 255 255 / 50%), inset 0 -1px 2px rgb(36 48 65 / 5%), 0 3px 10px rgb(24 36 52 / 9%), 0 0.5px 1px rgb(24 36 52 / 7%);
+  --lw-toolbar-circle-size: 40px;
+  --lw-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.055);
+  /* Influencer CandidateCard / Berd card-tile action elevation. */
+  --lw-shadow-card-action: inset 0 -1px 0 rgb(76 76 76 / 0.05), 0 0 0 1px rgb(76 76 76 / 0.03), 0 1px 2px rgb(76 76 76 / 0.04), 0 3px 6px rgb(76 76 76 / 0.05), 0 8px 16px rgb(76 76 76 / 0.06);
+  --lw-shadow-2: 0 8px 28px rgba(0, 0, 0, 0.09), 0 2px 7px rgba(0, 0, 0, 0.04);
+  --lw-shadow-3: 0 24px 70px rgba(0, 0, 0, 0.16), 0 4px 14px rgba(0, 0, 0, 0.07);
+  /* Compact menu frost: single scattering layer, without a modal scrim.
+     Web approximation; selection guide: materials.md. */
+  --lw-menu-fill: rgb(255 255 255 / 60%);
+  --lw-menu-blur: 24px;
+  --lw-menu-saturation: 140%;
+  --lw-menu-border: rgb(255 255 255 / 72%);
+  --lw-menu-shadow: inset 0 1px 0 rgb(255 255 255 / 75%), inset 0 -1px 0 rgb(36 48 65 / 4%), 0 12px 32px rgb(24 36 52 / 13%), 0 2px 6px rgb(24 36 52 / 6%);
+  --lw-menu-fallback: var(--lw-color-canvas);
+  /* MusicModal / HeroUI lab surface, shared by workbench dialogs and companions. */
+  --lw-surface-fill: rgb(248 250 253 / 58%);
+  --lw-dialog-surface-fill: rgb(248 250 253 / 78%);
+  --lw-surface-blur: 40px;
+  --lw-surface-saturation: 155%;
+  --lw-surface-border: rgb(255 255 255 / 78%);
+  --lw-surface-shadow: inset 0 1px 0 rgb(255 255 255 / 82%), inset 0 -1px 0 rgb(36 48 65 / 5%), 0 18px 54px rgb(24 36 52 / 14%), 0 2px 8px rgb(24 36 52 / 7%);
+  --lw-surface-scrim: rgb(0 0 0 / 16%);
+  --lw-surface-scroll-edge: 28px;
+
+  /* Motion */
+  --lw-duration-press: 100ms;
+  --lw-duration-fast: 140ms;
+  --lw-duration-standard: 180ms;
+  --lw-duration-layer: 320ms;
+  --lw-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --lw-ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+  --lw-press-scale: 0.96;
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --lw-color-text-secondary: #4f4f53;
+    --lw-color-text-tertiary: #626267;
+    --lw-color-separator: rgba(28, 28, 30, 0.28);
+    --lw-color-separator-strong: rgba(28, 28, 30, 0.42);
+  }
+}

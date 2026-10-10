@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="达人合作的隐私政策。">
+<meta name="color-scheme" content="light">
+<title>隐私政策 · 达人合作</title>
+<link rel="icon" type="image/png" href="assets/favicon-flight.png">
+<link rel="stylesheet" href="assets/design-tokens.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body class="policy-page">
+<a class="skip-link" href="#policy-content">跳至正文</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="brand" href="index.html"><img src="assets/favicon-flight.png" width="36" height="36" alt="">达人合作</a>
+<nav class="site-nav" aria-label="主导航"><a href="index.html">项目介绍</a><a href="privacy.html" aria-current="page">隐私政策</a><a href="terms.html">使用条款</a></nav>
+</div></header>
+<div class="policy-layout"><p class="policy-breadcrumb"><a href="index.html">返回项目介绍</a></p>
+<main id="policy-content"><h1>隐私政策</h1>
+<p class="policy-date">更新日期：2026 年 10 月 10 日</p>
+<p>「达人合作」是由 vitcheu 维护的自托管邮件工作台，用于管理已授权邮箱的合作邮件。本政策说明工作台如何处理数据，以及本介绍网站与工作台各自的范围。</p>
+<h2>我们处理哪些数据</h2>
+<ul><li>连接账号时，处理 Google 提供的账号标识、邮箱地址及基本身份信息，用于区分和管理发件账号。</li><li>发信时，处理你填写的收件地址、主题、正文、模板和发送结果，用于提交邮件、显示记录与避免重复发送。</li><li>启用回复检查后，读取所授权 Gmail 的候选邮件及邮件头以关联回复，保存关联回复的发件地址、主题、时间、正文预览和关联记录。读取权限覆盖邮箱，当前界面只展示匹配到的合作回复。</li><li>启用自有测试收件箱检查后，处理该邮箱的认证凭据与邮件位置信息，用于判断测试信进入收件箱或垃圾箱。</li><li>保存授权令牌、到期时间和刷新配置，以便在你允许的范围内保持连接。</li></ul>
+<h2>Google 权限如何使用</h2>
+<p>Gmail API 发信申请发送权限；回复检查另需只读邮件权限。SMTP OAuth2 需要 Google 的完整邮件权限，该权限包含读取、修改、删除和发送；工作台的 SMTP 功能使用其中的发信能力。你也可以选择 Google 应用专用密码进行 SMTP 认证。实际授权范围会在 Google 确认页展示。</p>
+<p>工作台通过 Google 的授权页面连接账号，不接收你的 Google 登录密码。授权后的后台刷新会在服务运行且你开启相关设置时执行。</p>
+<h2>数据保存在哪里</h2>
+<p>邮件工作台运行在部署者管理的电脑或内网服务上。授权凭据、配置、发送记录和回复预览保存在该部署环境中；文件访问受到系统权限限制，当前不提供应用层统一加密。自有 QQ 测试邮箱授权码保存在 macOS 系统钥匙串。部署者负责设备、磁盘加密、网络访问和备份安全。</p>
+<p>本网站仅展示项目说明与政策，不接收邮件内容或授权令牌，不提供邮箱登录入口，也不加载分析或广告脚本。GitHub Pages 作为网站托管方可能处理访问所需的 IP 地址和请求日志，详见 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>。</p>
+<h2>数据的使用与共享</h2>
+<p>工作台将发送内容提交给 Google 和你指定的收件人；测试收件箱检查会连接相应邮箱服务商。Google 邮件数据只用于你启用的邮件功能，不出售，不用于广告、信用评估或训练通用人工智能模型。维护者不通过本网站收集工作台数据。需要人工排查具体邮件时，须先获得你的许可，或满足适用的安全及法律要求。</p>
+<p>「达人合作」对 Google API 数据的使用及转移遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>，包括其中的 Limited Use 要求。</p>
+<h2>保留、撤销与删除</h2>
+<p>当前没有按固定天数自动清理历史记录的机制，数据保留至部署者主动清理。删除邮箱会清除其本机连接和凭据，历史发送记录及检查数据仍可能保留。撤销授权会停止相应 OAuth 访问；应用专用密码需分别移除，并可在 Google 账号中撤销。</p>
+<p>如需完整删除数据，请联系该工作台的部署者，停止服务并清理账号凭据、发送记录、回复检查数据库及备份。仅删除连接不会删除已送达收件人的邮件。你也可以随时在 <a href="https://myaccount.google.com/connections">Google 账号连接设置</a>中撤销应用访问。</p>
+<h2>联系与更新</h2>
+<p>使用与隐私问题可通过 <a href="https://github.com/vitcheu/creator-mail-guide/issues">项目反馈</a>联系维护者 vitcheu；如需处理个人数据，请先仅说明请求类型，由维护者与你确认适当的私密沟通方式。公开反馈中请勿填写邮件正文、密码、令牌或个人资料。政策改变时会更新本页日期；新增数据用途或权限会在启用前说明并取得相应同意。</p>
+</main>
+</div>
+<footer class="site-footer"><div class="wrap footer-inner"><p>达人合作 · 自托管邮件工具</p><div class="footer-links"><a href="https://github.com/vitcheu">维护者 vitcheu</a><a href="https://github.com/vitcheu/creator-mail-guide/issues">问题反馈</a><a href="privacy.html">隐私政策</a><a href="terms.html">使用条款</a></div></div></footer>
+</body>
+</html>
